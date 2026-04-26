@@ -102,8 +102,7 @@ class Database:
     
     def close(self):
         """Close database connection"""
-        if self.connection:
-            self.connection.close()
+        logger.info("Database connection closed")
 
 # Create global database instance
 db = Database()

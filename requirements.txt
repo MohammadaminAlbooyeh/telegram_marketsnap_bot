@@ -1,0 +1,11 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+python-telegram-bot==20.3
+python-dotenv==1.0.0
+requests==2.31.0
+beautifulsoup4==4.12.2    # ✅  TGJU scraping
+lxml==4.9.3               # ✅  HTML parsing
+apscheduler==3.10.4       # ✅  scheduler
+yfinance==0.2.32          # ✅  Yahoo Finance/Oil
+pytest==7.4.3
+gunicorn==21.2.0
