@@ -13,6 +13,8 @@ A Telegram bot for real-time price tracking of exchange rates, cryptocurrencies,
 
 ## Setup
 
+### Option 1: Direct (Local)
+
 1. Clone the repository
 2. Copy `.env.example` to `.env` and fill in your `BOT_TOKEN`
 3. Install dependencies:
@@ -23,6 +25,29 @@ A Telegram bot for real-time price tracking of exchange rates, cryptocurrencies,
    ```bash
    python main.py
    ```
+
+### Option 2: Docker (Recommended for Raspberry Pi)
+
+1. Clone the repository on your Raspberry Pi
+2. Copy `.env.example` to `.env` and fill in your `BOT_TOKEN`
+3. Build and run with Docker Compose:
+   ```bash
+   docker compose up -d --build
+   ```
+4. View logs:
+   ```bash
+   docker compose logs -f
+   ```
+5. Stop the bot:
+   ```bash
+   docker compose down
+   ```
+
+#### Raspberry Pi Notes
+- The Dockerfile uses `python:3.11-slim-bookworm` which has official ARM64 support
+- First build may take a few minutes on Raspberry Pi (compiling `lxml`)
+- The container limits memory to 512MB by default (suitable for Pi)
+- Database and logs are persisted via Docker volumes
 
 ## Commands
 
