@@ -24,6 +24,7 @@ class Config:
     CACHE_TYPE = os.getenv("CACHE_TYPE", "memory")  # redis or memory
     REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
     USD_IRR_CACHE_MINUTES = int(os.getenv("USD_IRR_CACHE_MINUTES", "10"))
+    EUR_IRR_CACHE_MINUTES = int(os.getenv("EUR_IRR_CACHE_MINUTES", "10"))
     CRYPTO_CACHE_MINUTES = int(os.getenv("CRYPTO_CACHE_MINUTES", "5"))
     OIL_CACHE_MINUTES = int(os.getenv("OIL_CACHE_MINUTES", "20"))
     GOLD_CACHE_MINUTES = int(os.getenv("GOLD_CACHE_MINUTES", "15"))

@@ -17,6 +17,7 @@ from app.handlers.oil_handlers import oil
 from app.handlers.alert_handlers import alerts, setalert
 from app.handlers.callback_handlers import button_callback
 from app.handlers.error_handler import error_handler
+from app.scrapers.scheduler import PriceScheduler
 
 
 def main():
@@ -46,10 +47,19 @@ def main():
     # Error handler
     application.add_error_handler(error_handler)
 
+    # Start background price scheduler
+    scheduler = PriceScheduler()
+    scheduler.start()
+    logger.info("Background scheduler started")
+
     logger.info("Starting bot...")
 
-    # Run the bot until Ctrl-C is pressed
-    application.run_polling(allowed_updates=Update.ALL_TYPES)
+    try:
+        # Run the bot until Ctrl-C is pressed
+        application.run_polling(allowed_updates=Update.ALL_TYPES)
+    finally:
+        scheduler.stop()
+        logger.info("Bot stopped, scheduler shutdown")
 
 
 if __name__ == "__main__":

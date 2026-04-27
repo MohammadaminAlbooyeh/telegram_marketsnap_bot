@@ -85,20 +85,30 @@ class Database:
     def execute_query(self, query: str, params: tuple = ()):
         """Execute a query that returns results"""
         conn = self.get_connection()
-        cursor = conn.cursor()
-        cursor.execute(query, params)
-        results = cursor.fetchall()
-        conn.close()
-        return results
+        try:
+            cursor = conn.cursor()
+            cursor.execute(query, params)
+            results = cursor.fetchall()
+            return results
+        except Exception as e:
+            logger.error(f"Database query error: {e}")
+            return []
+        finally:
+            conn.close()
     
     def execute_update(self, query: str, params: tuple = ()):
         """Execute insert/update/delete query"""
         conn = self.get_connection()
-        cursor = conn.cursor()
-        cursor.execute(query, params)
-        conn.commit()
-        conn.close()
-        logger.info(f"Query executed - rows affected: {cursor.rowcount}")
+        try:
+            cursor = conn.cursor()
+            cursor.execute(query, params)
+            conn.commit()
+            logger.info(f"Query executed - rows affected: {cursor.rowcount}")
+        except Exception as e:
+            conn.rollback()
+            logger.error(f"Database update error: {e}")
+        finally:
+            conn.close()
     
     def close(self):
         """Close database connection"""

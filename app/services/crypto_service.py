@@ -40,6 +40,7 @@ class CryptoService:
                 },
                 timeout=Config.REQUEST_TIMEOUT
             )
+            response.raise_for_status()  # Check HTTP status
 
             data = response.json()
             bitcoin = data.get("bitcoin", {})
@@ -86,6 +87,7 @@ class CryptoService:
                 },
                 timeout=Config.REQUEST_TIMEOUT
             )
+            response.raise_for_status()  # Check HTTP status
 
             data = response.json()
             ethereum = data.get("ethereum", {})

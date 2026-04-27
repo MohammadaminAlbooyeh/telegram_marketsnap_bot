@@ -1,15 +1,23 @@
 import functools
+import time
+import asyncio
 from app.core.logger import logger
 
 
 def log_execution_time(func):
-    """Decorator to log execution time of a function."""
+    """Decorator to log execution time — supports both sync and async functions."""
     @functools.wraps(func)
-    def wrapper(*args, **kwargs):
-        import time
+    async def async_wrapper(*args, **kwargs):
+        start = time.time()
+        result = await func(*args, **kwargs)
+        logger.info(f"{func.__name__} executed in {time.time() - start:.4f}s")
+        return result
+
+    @functools.wraps(func)
+    def sync_wrapper(*args, **kwargs):
         start = time.time()
         result = func(*args, **kwargs)
-        elapsed = time.time() - start
-        logger.info(f"{func.__name__} executed in {elapsed:.4f}s")
+        logger.info(f"{func.__name__} executed in {time.time() - start:.4f}s")
         return result
-    return wrapper
+
+    return async_wrapper if asyncio.iscoroutinefunction(func) else sync_wrapper
