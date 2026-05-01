@@ -440,3 +440,5 @@
 2026-04-26 16:14:29,701 - apscheduler.scheduler - INFO - Scheduler has been shut down
 2026-04-26 16:14:29,701 - app.core.logger - INFO - Price scheduler stopped
 2026-04-26 16:14:29,702 - app.core.logger - INFO - Bot stopped, scheduler shutdown
+2026-04-30 23:42:10,396 - utils.logger - INFO - Database initialized successfully
+2026-04-30 23:42:37,111 - utils.logger - INFO - Database initialized successfully

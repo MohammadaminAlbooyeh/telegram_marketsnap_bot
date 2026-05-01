@@ -7,17 +7,13 @@ from telegram.ext import (
     CallbackQueryHandler,
 )
 
-from app.core.config import Config
-from app.core.logger import logger
-from app.handlers.start_handler import start
-from app.handlers.crypto_handlers import bitcoin, ethereum, crypto
-from app.handlers.currency_handlers import rates, usd, eur
-from app.handlers.gold_handlers import gold
-from app.handlers.oil_handlers import oil
-from app.handlers.alert_handlers import alerts, setalert
-from app.handlers.callback_handlers import button_callback
-from app.handlers.error_handler import error_handler
-from app.scrapers.scheduler import PriceScheduler
+from config import Config
+from utils.logger import logger
+from handlers.start import start
+from handlers.stock_handlers import bitcoin, ethereum, crypto, alerts, setalert
+from handlers.market_handlers import rates, usd, eur, gold, oil
+from handlers.help import button_callback, error_handler
+from utils.scheduler import PriceScheduler
 
 
 def main():
