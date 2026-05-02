@@ -66,7 +66,7 @@ async def eur(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(message)
 
 async def gold(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Handle /gold command - show gold coin price"""
+    """Handle /gold command - show gold coin price and price per gram"""
     data = TGJUService.get_gold_price()
 
     if not data:
@@ -74,11 +74,13 @@ async def gold(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         return
 
     message = (
-        f"🥇 Gold Coin Price\n"
+        f"🥇 Gold Price\n"
         f"━━━━━━━━━━━━━━━━━━━━━\n\n"
-        f"Price: {data['price']:,.0f} IRR\n\n"
-        f"Source: {data['source']}\n"
-        f"Time: {data['timestamp']}"
+        f"💰 Gold Coin (Sekee)\n"
+        f"   {data['price_coin']:,.0f} IRR ({data['weight_grams']:.2f}g)\n\n"
+        f"📊 Price Per Gram\n"
+        f"   {data['price_per_gram']:,.0f} IRR/g\n\n"
+        f"Source: {data['source']}"
     )
 
     logger.info(f"User {update.effective_user.id} requested gold price")

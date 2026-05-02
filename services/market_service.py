@@ -173,15 +173,21 @@ class TGJUService:
             logger.error("Failed to fetch or estimate gold price from all sources")
             return None
 
+        # Calculate price per gram (sekee is 1/4 troy ounce = 7.77588 grams)
+        grams_per_sekee = 7.77588
+        price_per_gram = price / grams_per_sekee
+
         result = {
-            "asset": "Gold Coin",
-            "price": price,
+            "asset": "Gold Coin (Sekee)",
+            "price_coin": price,  # Price for 1/4 troy ounce (sekee)
+            "price_per_gram": price_per_gram,  # Price per gram
+            "weight_grams": grams_per_sekee,
             "currency": "IRR",
             "timestamp": datetime.utcnow().isoformat(),
             "source": source,
         }
         cache_service.set("gold_price", result, Config.GOLD_CACHE_MINUTES)
-        logger.info(f"Gold price fetched: {price:.0f} ({source})")
+        logger.info(f"Gold price fetched: Coin={price:.0f} IRR, Per gram={price_per_gram:.0f} IRR ({source})")
         return result
 
 

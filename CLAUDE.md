@@ -5,7 +5,7 @@
 MarketSnap is a Telegram bot that provides real-time price tracking for:
 - **Exchange Rates**: USD/EUR to Iranian Rial (IRR)
 - **Cryptocurrencies**: Bitcoin, Ethereum, and top 10 coins via CoinGecko
-- **Gold Prices**: Iranian gold coin (Emami/Sekee) prices
+- **Gold Prices**: Iranian gold coin (Emami/Sekee) prices and cost of gold per gram in iranian Rial (IRR)
 - **Oil Prices**: WTI and Brent crude oil prices
 - **Price Alerts**: User-configured price threshold notifications
 

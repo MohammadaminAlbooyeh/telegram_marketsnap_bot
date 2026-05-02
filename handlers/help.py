@@ -60,8 +60,11 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         gold_data = TGJUService.get_gold_price()
         if gold_data:
             text = (
-                f"🥇 Gold Coin Price\n━━━━━━━━━━━━━━━━━━━━━\n\n"
-                f"Price: {gold_data['price']:,.0f} IRR\n\n"
+                f"🥇 Gold Price\n━━━━━━━━━━━━━━━━━━━━━\n\n"
+                f"💰 Gold Coin (Sekee)\n"
+                f"   {gold_data['price_coin']:,.0f} IRR ({gold_data['weight_grams']:.2f}g)\n\n"
+                f"📊 Price Per Gram\n"
+                f"   {gold_data['price_per_gram']:,.0f} IRR/g\n\n"
                 f"Source: {gold_data['source']}"
             )
         else:

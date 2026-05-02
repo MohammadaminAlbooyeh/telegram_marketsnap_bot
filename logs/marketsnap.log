@@ -83,3 +83,33 @@
 2026-05-02 14:05:13,708 - utils.logger - INFO - Gold price calculated using market estimate: 657102876 IRR
 2026-05-02 14:05:13,708 - utils.logger - INFO - Cache set: gold_price (expires in 15 minutes)
 2026-05-02 14:05:13,708 - utils.logger - INFO - Gold price fetched: 657102876 (Market Estimate (~$2000/oz)+TGJU(USD/IRR))
+2026-05-02 14:06:34,255 - utils.logger - INFO - Cache cleared
+2026-05-02 14:06:34,255 - utils.logger - INFO - Fetching USD/IRR from TGJU...
+2026-05-02 14:06:34,705 - utils.logger - ERROR - TGJU fetch error (price_dollar_rl): HTTPSConnectionPool(host='www.tgju.org', port=443): Max retries exceeded with url: /v1/market/indicator/summary-table-data/price_dollar_rl (Caused by NameResolutionError("HTTPSConnection(host='www.tgju.org', port=443): Failed to resolve 'www.tgju.org' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-02 14:06:34,706 - utils.logger - INFO - TGJU failed for USD/IRR. Using moneyconvert fallback...
+2026-05-02 14:06:34,814 - utils.logger - INFO - Cache set: usd_irr (expires in 10 minutes)
+2026-05-02 14:06:34,814 - utils.logger - INFO - USD/IRR fetched: 1314205.75251575 (moneyconvert)
+2026-05-02 14:06:34,815 - utils.logger - INFO - Fetching EUR/IRR from TGJU...
+2026-05-02 14:06:34,817 - utils.logger - ERROR - TGJU fetch error (price_eur): HTTPSConnectionPool(host='www.tgju.org', port=443): Max retries exceeded with url: /v1/market/indicator/summary-table-data/price_eur (Caused by NameResolutionError("HTTPSConnection(host='www.tgju.org', port=443): Failed to resolve 'www.tgju.org' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-02 14:06:34,817 - utils.logger - INFO - TGJU failed for EUR/IRR. Using moneyconvert fallback...
+2026-05-02 14:06:34,905 - utils.logger - INFO - Cache set: eur_irr (expires in 10 minutes)
+2026-05-02 14:06:34,905 - utils.logger - INFO - EUR/IRR fetched: 1540616.3307192323 (moneyconvert)
+2026-05-02 14:06:34,905 - utils.logger - INFO - Fetching Gold price from TGJU...
+2026-05-02 14:06:34,907 - utils.logger - ERROR - TGJU fetch error (sekee): HTTPSConnectionPool(host='www.tgju.org', port=443): Max retries exceeded with url: /v1/market/indicator/summary-table-data/sekee (Caused by NameResolutionError("HTTPSConnection(host='www.tgju.org', port=443): Failed to resolve 'www.tgju.org' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-02 14:06:34,907 - utils.logger - INFO - TGJU failed for Gold price. Using market estimate...
+2026-05-02 14:06:34,907 - utils.logger - INFO - Cache hit: usd_irr
+2026-05-02 14:06:34,907 - utils.logger - INFO - Gold price calculated using market estimate: 657102876 IRR
+2026-05-02 14:06:34,907 - utils.logger - INFO - Cache set: gold_price (expires in 15 minutes)
+2026-05-02 14:06:34,907 - utils.logger - INFO - Gold price fetched: 657102876 (Market Estimate (~$2000/oz)+TGJU(USD/IRR))
+2026-05-02 14:23:46,993 - utils.logger - INFO - Cache cleared
+2026-05-02 14:23:46,993 - utils.logger - INFO - Fetching Gold price from TGJU...
+2026-05-02 14:23:47,574 - utils.logger - ERROR - TGJU fetch error (sekee): HTTPSConnectionPool(host='www.tgju.org', port=443): Max retries exceeded with url: /v1/market/indicator/summary-table-data/sekee (Caused by NameResolutionError("HTTPSConnection(host='www.tgju.org', port=443): Failed to resolve 'www.tgju.org' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-02 14:23:47,574 - utils.logger - INFO - TGJU failed for Gold price. Using market estimate...
+2026-05-02 14:23:47,574 - utils.logger - INFO - Fetching USD/IRR from TGJU...
+2026-05-02 14:23:47,577 - utils.logger - ERROR - TGJU fetch error (price_dollar_rl): HTTPSConnectionPool(host='www.tgju.org', port=443): Max retries exceeded with url: /v1/market/indicator/summary-table-data/price_dollar_rl (Caused by NameResolutionError("HTTPSConnection(host='www.tgju.org', port=443): Failed to resolve 'www.tgju.org' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-02 14:23:47,577 - utils.logger - INFO - TGJU failed for USD/IRR. Using moneyconvert fallback...
+2026-05-02 14:23:47,673 - utils.logger - INFO - Cache set: usd_irr (expires in 10 minutes)
+2026-05-02 14:23:47,673 - utils.logger - INFO - USD/IRR fetched: 1314205.75251575 (moneyconvert)
+2026-05-02 14:23:47,673 - utils.logger - INFO - Gold price calculated using market estimate: 657102876 IRR
+2026-05-02 14:23:47,674 - utils.logger - INFO - Cache set: gold_price (expires in 15 minutes)
+2026-05-02 14:23:47,674 - utils.logger - INFO - Gold price fetched: Coin=657102876 IRR, Per gram=84505275 IRR (Market Estimate (~$2000/oz)+TGJU(USD/IRR))
