@@ -43,7 +43,7 @@ class TGJUService:
 
     @staticmethod
     def _fetch_exchangerate_to_irr(base: str) -> float | None:
-        """Fallback: fetch FX rate from moneyconvert.net to IRR."""
+        """Fallback: fetch FX rate to IRR from moneyconvert.net."""
         try:
             url = "https://cdn.moneyconvert.net/api/latest.json"
             r = requests.get(
@@ -53,34 +53,30 @@ class TGJUService:
             )
             r.raise_for_status()
             data = r.json()
-            
-            # Extract IRR rate from rates object (base is always USD)
-            if base.upper() != "USD":
-                # If base is not USD, we need to calculate cross rate
-                # For now, we only support USD and EUR as base
-                if base.upper() == "EUR":
-                    # Get USD rate first
-                    usd_data = TGJUService._fetch_exchangerate_to_irr("USD")
-                    if usd_data is None:
-                        return None
-                    # Get EUR to USD rate (1 / EUR rate where base=USD)
-                    rates = data.get("rates", {})
-                    eur_rate = rates.get("EUR")
-                    if eur_rate is None or eur_rate == 0:
-                        return None
-                    # EUR to IRR = USD to IRR / EUR to USD
-                    return usd_data / eur_rate
-                else:
-                    logger.warning(f"Unsupported base currency for fallback: {base}")
-                    return None
-            else:
-                # Base is USD
-                rates = data.get("rates", {})
+
+            rates = data.get("rates", {})
+
+            if base.upper() == "USD":
+                # Direct USD to IRR
                 irr_rate = rates.get("IRR")
-                
-                if irr_rate is None:
+                if irr_rate is not None and irr_rate > 0:
+                    return float(irr_rate)
+            elif base.upper() == "EUR":
+                # EUR to IRR: calculate via USD
+                # Get USD/IRR rate
+                usd_to_irr = rates.get("IRR")
+                if usd_to_irr is None or usd_to_irr <= 0:
                     return None
-                return float(irr_rate)
+
+                # Get EUR/USD rate
+                eur_to_usd = rates.get("EUR")
+                if eur_to_usd is None or eur_to_usd == 0:
+                    return None
+
+                # EUR to IRR = USD to IRR / EUR to USD
+                return usd_to_irr / eur_to_usd
+
+            return None
         except Exception as e:
             logger.error(f"MoneyConvert fallback fetch error ({base}->IRR): {e}")
             return None
@@ -96,9 +92,9 @@ class TGJUService:
 
         source = "TGJU"
         if price is None:
-            logger.info("TGJU failed for USD/IRR. Using exchangerate.host fallback...")
+            logger.info("TGJU failed for USD/IRR. Using moneyconvert fallback...")
             price = TGJUService._fetch_exchangerate_to_irr("USD")
-            source = "exchangerate.host"
+            source = "moneyconvert"
 
         if price is None:
             return None
@@ -125,9 +121,9 @@ class TGJUService:
 
         source = "TGJU"
         if price is None:
-            logger.info("TGJU failed for EUR/IRR. Using exchangerate.host fallback...")
+            logger.info("TGJU failed for EUR/IRR. Using moneyconvert fallback...")
             price = TGJUService._fetch_exchangerate_to_irr("EUR")
-            source = "exchangerate.host"
+            source = "moneyconvert"
 
         if price is None:
             return None
