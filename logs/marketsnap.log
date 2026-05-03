@@ -113,3 +113,153 @@
 2026-05-02 14:23:47,673 - utils.logger - INFO - Gold price calculated using market estimate: 657102876 IRR
 2026-05-02 14:23:47,674 - utils.logger - INFO - Cache set: gold_price (expires in 15 minutes)
 2026-05-02 14:23:47,674 - utils.logger - INFO - Gold price fetched: Coin=657102876 IRR, Per gram=84505275 IRR (Market Estimate (~$2000/oz)+TGJU(USD/IRR))
+2026-05-02 14:25:44,342 - utils.logger - INFO - Database initialized successfully
+2026-05-02 14:25:48,782 - utils.logger - INFO - Database initialized successfully
+2026-05-02 14:26:01,812 - utils.logger - INFO - Database initialized successfully
+2026-05-02 14:26:56,561 - utils.logger - INFO - Database initialized successfully
+2026-05-02 14:26:56,803 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-02 14:26:56,804 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-02 14:26:56,804 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-02 14:26:56,804 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-02 14:26:56,805 - apscheduler.scheduler - INFO - Added job "TGJUService.get_usd_to_irr" to job store "default"
+2026-05-02 14:26:56,805 - apscheduler.scheduler - INFO - Added job "CryptoService.get_bitcoin_price" to job store "default"
+2026-05-02 14:26:56,805 - apscheduler.scheduler - INFO - Added job "OilService.get_wti_price" to job store "default"
+2026-05-02 14:26:56,805 - apscheduler.scheduler - INFO - Added job "PriceScheduler._check_alerts" to job store "default"
+2026-05-02 14:26:56,805 - apscheduler.scheduler - INFO - Scheduler started
+2026-05-02 14:26:56,806 - utils.logger - INFO - Price scheduler started
+2026-05-02 14:26:56,806 - utils.logger - INFO - Background scheduler started
+2026-05-02 14:26:56,806 - utils.logger - INFO - Starting bot...
+2026-05-02 14:26:57,170 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getMe "HTTP/1.1 200 OK"
+2026-05-02 14:26:57,208 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/deleteWebhook "HTTP/1.1 200 OK"
+2026-05-02 14:26:57,209 - apscheduler.scheduler - INFO - Scheduler started
+2026-05-02 14:26:57,209 - telegram.ext.Application - INFO - Application started
+2026-05-02 14:27:01,687 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 409 Conflict"
+2026-05-02 14:27:01,688 - utils.logger - ERROR - Exception while handling an update: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-02 14:27:07,459 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 409 Conflict"
+2026-05-02 14:27:07,460 - utils.logger - ERROR - Exception while handling an update: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-02 14:27:14,517 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 409 Conflict"
+2026-05-02 14:27:14,517 - utils.logger - ERROR - Exception while handling an update: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-02 14:27:20,392 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 409 Conflict"
+2026-05-02 14:27:20,392 - utils.logger - ERROR - Exception while handling an update: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-02 14:27:29,054 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 409 Conflict"
+2026-05-02 14:27:29,054 - utils.logger - ERROR - Exception while handling an update: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-02 14:27:42,092 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 409 Conflict"
+2026-05-02 14:27:42,093 - utils.logger - ERROR - Exception while handling an update: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-02 14:28:00,215 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:28:01,724 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 409 Conflict"
+2026-05-02 14:28:01,725 - utils.logger - ERROR - Exception while handling an update: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-02 14:28:12,772 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:28:22,950 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:28:23,092 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 409 Conflict"
+2026-05-02 14:28:23,092 - utils.logger - ERROR - Exception while handling an update: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-02 14:28:34,244 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:28:44,311 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:28:53,119 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 409 Conflict"
+2026-05-02 14:28:53,120 - utils.logger - ERROR - Exception while handling an update: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-02 14:29:19,627 - utils.logger - INFO - Database initialized successfully
+2026-05-02 14:29:19,884 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-02 14:29:19,884 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-02 14:29:19,884 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-02 14:29:19,884 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-02 14:29:19,885 - apscheduler.scheduler - INFO - Added job "TGJUService.get_usd_to_irr" to job store "default"
+2026-05-02 14:29:19,885 - apscheduler.scheduler - INFO - Added job "CryptoService.get_bitcoin_price" to job store "default"
+2026-05-02 14:29:19,885 - apscheduler.scheduler - INFO - Added job "OilService.get_wti_price" to job store "default"
+2026-05-02 14:29:19,886 - apscheduler.scheduler - INFO - Added job "PriceScheduler._check_alerts" to job store "default"
+2026-05-02 14:29:19,886 - apscheduler.scheduler - INFO - Scheduler started
+2026-05-02 14:29:19,886 - utils.logger - INFO - Price scheduler started
+2026-05-02 14:29:19,886 - utils.logger - INFO - Background scheduler started
+2026-05-02 14:29:19,886 - utils.logger - INFO - Starting bot...
+2026-05-02 14:29:20,008 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getMe "HTTP/1.1 200 OK"
+2026-05-02 14:29:20,043 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/deleteWebhook "HTTP/1.1 200 OK"
+2026-05-02 14:29:20,045 - apscheduler.scheduler - INFO - Scheduler started
+2026-05-02 14:29:20,045 - telegram.ext.Application - INFO - Application started
+2026-05-02 14:29:30,303 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:29:40,437 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:29:50,463 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:30:00,512 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:30:10,548 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:30:20,577 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:30:30,716 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:30:40,750 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:30:50,786 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:31:00,932 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:31:11,063 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:31:18,941 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:31:18,941 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2026-05-02 14:31:18,942 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-05-02 14:31:18,953 - telegram.ext.Application - INFO - Application.stop() complete
+2026-05-02 14:31:18,955 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-05-02 14:31:18,955 - utils.logger - INFO - Price scheduler stopped
+2026-05-02 14:31:18,955 - utils.logger - INFO - Bot stopped, scheduler shutdown
+2026-05-02 14:41:06,539 - utils.logger - INFO - Database initialized successfully
+2026-05-02 14:41:06,764 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-02 14:41:06,764 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-02 14:41:06,764 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-02 14:41:06,765 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-02 14:41:06,765 - apscheduler.scheduler - INFO - Added job "TGJUService.get_usd_to_irr" to job store "default"
+2026-05-02 14:41:06,766 - apscheduler.scheduler - INFO - Added job "CryptoService.get_bitcoin_price" to job store "default"
+2026-05-02 14:41:06,766 - apscheduler.scheduler - INFO - Added job "OilService.get_wti_price" to job store "default"
+2026-05-02 14:41:06,766 - apscheduler.scheduler - INFO - Added job "PriceScheduler._check_alerts" to job store "default"
+2026-05-02 14:41:06,766 - apscheduler.scheduler - INFO - Scheduler started
+2026-05-02 14:41:06,766 - utils.logger - INFO - Price scheduler started
+2026-05-02 14:41:06,766 - utils.logger - INFO - Background scheduler started
+2026-05-02 14:41:06,766 - utils.logger - INFO - Starting bot...
+2026-05-02 14:41:06,865 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getMe "HTTP/1.1 200 OK"
+2026-05-02 14:41:06,899 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/deleteWebhook "HTTP/1.1 200 OK"
+2026-05-02 14:41:06,900 - apscheduler.scheduler - INFO - Scheduler started
+2026-05-02 14:41:06,900 - telegram.ext.Application - INFO - Application started
+2026-05-02 14:41:10,551 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:41:10,554 - utils.logger - INFO - User 79640565 accessed
+2026-05-02 14:41:10,555 - utils.logger - INFO - User 79640565 started bot
+2026-05-02 14:41:10,640 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/sendMessage "HTTP/1.1 200 OK"
+2026-05-02 14:41:12,153 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:41:12,201 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-02 14:41:12,201 - utils.logger - INFO - Fetching Gold price from TGJU...
+2026-05-02 14:41:12,994 - utils.logger - ERROR - TGJU fetch error (sekee): HTTPSConnectionPool(host='www.tgju.org', port=443): Max retries exceeded with url: /v1/market/indicator/summary-table-data/sekee (Caused by NameResolutionError("HTTPSConnection(host='www.tgju.org', port=443): Failed to resolve 'www.tgju.org' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-02 14:41:12,994 - utils.logger - INFO - TGJU failed for Gold price. Using market estimate...
+2026-05-02 14:41:12,994 - utils.logger - INFO - Fetching USD/IRR from TGJU...
+2026-05-02 14:41:12,997 - utils.logger - ERROR - TGJU fetch error (price_dollar_rl): HTTPSConnectionPool(host='www.tgju.org', port=443): Max retries exceeded with url: /v1/market/indicator/summary-table-data/price_dollar_rl (Caused by NameResolutionError("HTTPSConnection(host='www.tgju.org', port=443): Failed to resolve 'www.tgju.org' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-02 14:41:12,997 - utils.logger - INFO - TGJU failed for USD/IRR. Using moneyconvert fallback...
+2026-05-02 14:41:13,108 - utils.logger - INFO - Cache set: usd_irr (expires in 10 minutes)
+2026-05-02 14:41:13,108 - utils.logger - INFO - USD/IRR fetched: 1314205.75251575 (moneyconvert)
+2026-05-02 14:41:13,108 - utils.logger - INFO - Gold price calculated using market estimate: 657102876 IRR
+2026-05-02 14:41:13,108 - utils.logger - INFO - Cache set: gold_price (expires in 15 minutes)
+2026-05-02 14:41:13,108 - utils.logger - INFO - Gold price fetched: Coin=657102876 IRR, Per gram=84505275 IRR (Market Estimate (~$2000/oz)+TGJU(USD/IRR))
+2026-05-02 14:41:13,155 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/editMessageText "HTTP/1.1 200 OK"
+2026-05-02 14:41:13,156 - utils.logger - INFO - User 79640565 clicked callback: menu_gold
+2026-05-02 14:41:18,132 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:41:18,206 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-02 14:41:18,295 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/editMessageText "HTTP/1.1 200 OK"
+2026-05-02 14:41:18,297 - utils.logger - INFO - User 79640565 clicked callback: menu_back
+2026-05-02 14:41:26,187 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:41:26,281 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-02 14:41:26,282 - utils.logger - INFO - Cache hit: usd_irr
+2026-05-02 14:41:26,282 - utils.logger - INFO - Fetching EUR/IRR from TGJU...
+2026-05-02 14:41:26,284 - utils.logger - ERROR - TGJU fetch error (price_eur): HTTPSConnectionPool(host='www.tgju.org', port=443): Max retries exceeded with url: /v1/market/indicator/summary-table-data/price_eur (Caused by NameResolutionError("HTTPSConnection(host='www.tgju.org', port=443): Failed to resolve 'www.tgju.org' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-02 14:41:26,284 - utils.logger - INFO - TGJU failed for EUR/IRR. Using moneyconvert fallback...
+2026-05-02 14:41:26,374 - utils.logger - INFO - Cache set: eur_irr (expires in 10 minutes)
+2026-05-02 14:41:26,375 - utils.logger - INFO - EUR/IRR fetched: 1540529.1765075908 (moneyconvert)
+2026-05-02 14:41:26,440 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/editMessageText "HTTP/1.1 200 OK"
+2026-05-02 14:41:26,441 - utils.logger - INFO - User 79640565 clicked callback: menu_rates
+2026-05-02 14:41:28,961 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:41:29,008 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-02 14:41:29,081 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/editMessageText "HTTP/1.1 200 OK"
+2026-05-02 14:41:29,082 - utils.logger - INFO - User 79640565 clicked callback: menu_back
+2026-05-02 14:41:30,931 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:41:30,971 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-02 14:41:30,971 - utils.logger - INFO - Cache hit: gold_price
+2026-05-02 14:41:31,030 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/editMessageText "HTTP/1.1 200 OK"
+2026-05-02 14:41:31,030 - utils.logger - INFO - User 79640565 clicked callback: menu_gold
+2026-05-02 14:41:40,957 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:41:45,453 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:41:45,569 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-05-02 14:41:45,630 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/editMessageText "HTTP/1.1 200 OK"
+2026-05-02 14:41:45,631 - utils.logger - INFO - User 79640565 clicked callback: menu_back
+2026-05-02 14:41:55,667 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:42:03,729 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8751713771:AAFrX2jNb6_YuRDGuKzKl7c1_Tif9neULb8/getUpdates "HTTP/1.1 200 OK"
+2026-05-02 14:42:03,730 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2026-05-02 14:42:03,730 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-05-02 14:42:03,741 - telegram.ext.Application - INFO - Application.stop() complete
+2026-05-02 14:42:03,742 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-05-02 14:42:03,743 - utils.logger - INFO - Price scheduler stopped
+2026-05-02 14:42:03,743 - utils.logger - INFO - Bot stopped, scheduler shutdown
